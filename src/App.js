@@ -6,43 +6,51 @@ import Sidebar from './sidebar/Sidebar';
 import React, {useEffect, useState} from 'react'
 
 function App() {
+  const [search, setSearch] = useState("")
 
   const APP_ID ='bb0a04fb'
   const API_KEY ='a3373011db3d5cb902adb61da213a1cb'
   
-  useEffect(() => {
-    const url1 =`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`
+  function api () {
+    const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${API_KEY}`
     fetch (url1)
     .then((res) => {
       return res.json()
     })
     .then((data) => {
       console.log(data)
+      
     })
-  })
-
-  
-  
+  }
   
 
-  const initialState = {ingredients: ''}
-    const [search, setSearch] = useState(initialState)
+  
+  
+  
+
+  
+    
     
 
     const handleChange = (event) => {
-        setSearch({...search, [event.target.id]: event.target.value})
+        setSearch(event.target.value)
 
     }
+
+    // function handleChange(event) {
+    //   setSearch(event.target.value);
+    // }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(search)
-        setSearch(initialState)
+        api()
 
     }
 
   return (
     <div className="App">
+      <h1 onClick={api}>Recipe searcher</h1>
       <Search
       handleChange= {handleChange}
       handleSubmit= {handleSubmit}
