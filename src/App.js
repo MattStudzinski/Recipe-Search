@@ -1,16 +1,44 @@
 import './App.css';
-import Search from './search/Search';
-import Results from './results/Results';
 import Details from './details/Details';
+import Results from './results/Results';
+import Search from './search/Search';
 import Sidebar from './sidebar/Sidebar';
+import React, {useEffect, useState} from 'react'
 
 function App() {
+
+ 
+
+  
+  
+  
+
+  const initialState = {ingredients: ''}
+    const [search, setSearch] = useState(initialState)
+    
+
+    const handleChange = (event) => {
+        setSearch({...search, [event.target.id]: event.target.value})
+
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        console.log(search)
+        setSearch(initialState)
+
+    }
+
   return (
     <div className="App">
-      <Search />
+      <Search
+      handleChange= {handleChange}
+      handleSubmit= {handleSubmit}
+      search= {search} />
       <Results />
       <Details />
       <Sidebar />
+      
     </div>
   );
 }
