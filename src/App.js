@@ -3,7 +3,8 @@ import Details from './details/Details';
 import Results from './results/Results';
 import Search from './search/Search';
 import Sidebar from './sidebar/Sidebar';
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
+
 
 function App() {
   const [search, setSearch] = useState("")

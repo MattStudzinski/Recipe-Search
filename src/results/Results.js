@@ -1,14 +1,34 @@
 import React from 'react';
 
-const Results = ({recipes}) => {
+
+const Recipe = ({recipe}) => {
+    const {label,image,url,ingredients} = recipe.recipe
     return (
-        <div className='recipes'>
-        {recipes !== [] && recipes.map(recipe =>
-            <h2>{recipe.recipe.label}</h2>   )}
-        
+        <div className='recipe'>
+            <h2>{label}</h2>
+            <img src={image} alt= {label}/>
+            <a href={url} target= "_blank" rel='noopener noreferrer'>
+                URL
+            </a>
+            <button>ingredients</button>
+            
         </div>
     );
 };
+
+
+
+const Results = ({recipes}) => {
+    return (
+        <div className='recipes'>
+        {recipes !== [] && recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe}/> )}
+        
+        
+        </div>
+    );
+    
+};
+
 
 export default Results;
 
