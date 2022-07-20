@@ -1,12 +1,15 @@
 import React from 'react';
 
-const Details = () => {
-    return (
-        <div>
-            Hello there instructions
-        </div>
-    );
+const Details = ({ingredients}) => {
+    return ingredients.map(ingredient => {
+        return(
+            <ul className='ingredient-list'>
+                <li className='ingredient-text'>{ingredient.text}</li>
+            </ul>
+        )
+    })
 };
+
 
 export default Details;
 

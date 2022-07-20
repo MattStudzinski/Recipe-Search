@@ -1,8 +1,10 @@
 import React from 'react';
+import Details from '../details/Details';
 
 
 const Recipe = ({recipe}) => {
     const {label,image,url,ingredients} = recipe.recipe
+    console.log(ingredients)
     return (
         <div className='recipe'>
             <h2>{label}</h2>
@@ -11,17 +13,22 @@ const Recipe = ({recipe}) => {
                 URL
             </a>
             <button>ingredients</button>
+            <Details ingredients={ingredients}/>
+            
             
         </div>
     );
+    
 };
 
 
 
 const Results = ({recipes}) => {
+
     return (
+        
         <div className='recipes'>
-        {recipes !== [] && recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe}/> )}
+        {recipes !== [] && recipes.map(recipe => <Recipe key={recipe.calories} recipe={recipe}/> )}
         
         
         </div>
