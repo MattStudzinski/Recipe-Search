@@ -1,5 +1,8 @@
 
 const Search = ({handleChange, handleSubmit, search}) => {
+    
+
+
    
     
     return (
@@ -10,7 +13,8 @@ const Search = ({handleChange, handleSubmit, search}) => {
             id="ingredients" 
             type="ingredients"
             onChange={handleChange}
-            value={search.ingredients}
+            value= {search}
+
             />
             <button type='submit'>Lets get cooking!</button>
         </form>

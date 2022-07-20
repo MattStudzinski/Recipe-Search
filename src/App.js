@@ -7,11 +7,12 @@ import React, {useEffect, useState} from 'react'
 
 function App() {
   const [search, setSearch] = useState("")
+  const [recipes, setRecipes] = useState([])
 
   const APP_ID ='bb0a04fb'
   const API_KEY ='a3373011db3d5cb902adb61da213a1cb'
   
-  function api () {
+  function getapi () {
     const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${API_KEY}`
     fetch (url1)
     .then((res) => {
@@ -19,17 +20,11 @@ function App() {
     })
     .then((data) => {
       console.log(data)
+      setSearch("")
+      setRecipes(data.hits)
       
     })
   }
-  
-
-  
-  
-  
-
-  
-    
     
 
     const handleChange = (event) => {
@@ -37,25 +32,24 @@ function App() {
 
     }
 
-    // function handleChange(event) {
-    //   setSearch(event.target.value);
-    // }
+    
 
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(search)
-        api()
+        getapi()
 
     }
 
   return (
     <div className="App">
-      <h1 onClick={api}>Recipe searcher</h1>
+      <h1>Recipe searcher</h1>
       <Search
       handleChange= {handleChange}
       handleSubmit= {handleSubmit}
       search= {search} />
-      <Results />
+      <Results 
+      recipes={recipes}/>
       <Details />
       <Sidebar />
       

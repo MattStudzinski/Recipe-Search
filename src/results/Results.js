@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Results = () => {
+const Results = ({recipes}) => {
     return (
-        <div>
-            I am your results
+        <div className='recipes'>
+        {recipes !== [] && recipes.map(recipe =>
+            <h2>{recipe.recipe.label}</h2>   )}
+        
         </div>
     );
 };
