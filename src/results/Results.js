@@ -12,6 +12,11 @@ const Recipe = ({recipe}) => {
             <a href={url} target= "_blank" rel='noopener noreferrer'>
                 URL
             </a>
+            <ol>
+                {ingredients.map(ingredient => (
+                    <li>{ingredient.text}</li>
+                ))}
+            </ol>
             <button>ingredients</button>
             <Details ingredients={ingredients}/>
             

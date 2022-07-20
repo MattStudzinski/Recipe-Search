@@ -1,13 +1,10 @@
 import React from 'react';
 
 const Details = ({ingredients}) => {
-    return ingredients.map(ingredient => {
-        return(
-            <ul className='ingredient-list'>
-                <li className='ingredient-text'>{ingredient.text}</li>
-            </ul>
+    
+        return (
+            <div>hello</div>
         )
-    })
 };
 
 
