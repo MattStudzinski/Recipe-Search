@@ -1,24 +1,36 @@
+import "./Results.css"
 import React from 'react';
+import { Link, Routes, Route, Navigate } from 'react-router-dom';
 import Details from '../details/Details';
 
 
+
 const Recipe = ({recipe}) => {
-    const {label,image,url,ingredients} = recipe.recipe
-    console.log(ingredients)
+    const {label,image,url,ingredients,} = recipe.recipe 
     return (
         <div className='recipe'>
-            <h2>{label}</h2>
-            <img src={image} alt= {label}/>
-            <a href={url} target= "_blank" rel='noopener noreferrer'>
-                URL
+            <h2 className='recipe-title'>{label}</h2>
+            <img className='food-image' src={image} alt= {label}/>
+            <a className='link' href={url} target= "_blank" rel='noopener noreferrer'>
+                Recipe Instructions
             </a>
-            <ol>
+
+            
+            <div className="more-detail">
+            <Link to='/details'>Recipe Details</Link>
+            </div>
+            <Routes>
+                <Route path="/details" element= {<Details/>}/>
+            </Routes>
+            
+            <ul className='ingredient-list'>
                 {ingredients.map(ingredient => (
                     <li>{ingredient.text}</li>
                 ))}
-            </ol>
-            <button>ingredients</button>
-            <Details ingredients={ingredients}/>
+            </ul>
+            
+            
+            
             
             
         </div>

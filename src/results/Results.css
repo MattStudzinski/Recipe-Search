@@ -1,0 +1,29 @@
+.recipe {
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 3px solid;
+    grid-auto-flow: row;
+}
+.recipe-title {
+    grid-row: 1/ span 1;
+    grid-column: 1/ span 3;
+}
+.food-image {
+    grid-row: 2/ span 2;
+    grid-column: 1/ span 2;
+
+}
+.link {
+    grid-row:4 /span 4;
+    grid-column: 1 /span 1
+
+}
+.more-detail {
+    grid-row: 1/ span 4;
+    grid-column: 2/ span 3;
+}
+.ingredient-list{
+    grid-row: 1 / span 4;
+    grid-column: 3 / span 3
+}

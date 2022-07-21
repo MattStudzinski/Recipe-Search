@@ -1,9 +1,11 @@
-import './App.css';
-import Details from './details/Details';
+
+import Home from './Home';
 import Results from './results/Results';
 import Search from './search/Search';
 import Sidebar from './sidebar/Sidebar';
 import React, { useState } from 'react'
+import {Routes, Route, Link} from 'react-router-dom'
+
 
 
 function App() {
@@ -44,15 +46,31 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Recipe searcher</h1>
+      
+      <nav>
+      <Link to="/">
+      <h5>back to search</h5>
+      </Link>
+      
+      </nav>
+      <main>
+      <Routes>
+      <Route path="/" element={<Home/>} />
+      </Routes>
+
       <Search
       handleChange= {handleChange}
       handleSubmit= {handleSubmit}
       search= {search} />
       <Results 
       recipes={recipes}/>
-      <Details />
-      <Sidebar />
+      <Sidebar
+      search={search}
+      setSearch={setSearch}/>
+
+      </main>
+
+      
       
     </div>
   );

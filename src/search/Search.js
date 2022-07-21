@@ -1,4 +1,4 @@
-
+import "./Search.css"
 const Search = ({handleChange, handleSubmit, search}) => {
     
 
@@ -14,6 +14,7 @@ const Search = ({handleChange, handleSubmit, search}) => {
             type="ingredients"
             onChange={handleChange}
             value= {search}
+            
 
             />
             <button type='submit'>Lets get cooking!</button>

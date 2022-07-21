@@ -1,9 +1,16 @@
 import React from 'react';
 
 const Sidebar = () => {
+
+    const options = {
+        option:['chicken', 'beef', 'chilli', 'noodles'],
+        value: '',
+    }
+
+   
     return (
         <div>
-            this is the sidebarr ya 
+            waffles
         </div>
     );
 };
