@@ -1,10 +1,35 @@
 .search-form{
     display: grid;
-    grid-template-rows: 20px 50px 50px 50px;
+    grid-template-rows: 20px 80px 50px 50px;
     grid-template-columns: 1fr;
     justify-items: center;
 }
 .finder{
-    grid-row:  ;
+    grid-row: 1;
     grid-column: 1;
+    color: white;
+
+}
+.title {
+    text-align: center;
+    margin:20px;
+    color: white;
+}
+.input{
+    grid-row: 2;
+    width: 50%;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(194, 196, 199);
+    
+    
+}
+.go{
+    grid-row: 3;
+    height: 30px;
+    font-size: 16px;
+    border:2px solid white;
+    border-radius: 3px;
+    
 }

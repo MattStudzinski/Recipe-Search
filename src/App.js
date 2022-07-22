@@ -5,7 +5,7 @@ import Search from './search/Search';
 import React, { useState } from 'react'
 import {Routes, Route, Link, Navigate} from 'react-router-dom'
 import Details from './details/Details';
-
+import './App.css'
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
       
       <nav>
       <Link to="/home">
-      <h5>back to search</h5>
+      <h5>Return to search</h5>
       </Link>
       
       </nav>

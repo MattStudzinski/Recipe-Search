@@ -7,9 +7,10 @@ const Search = ({handleChange, handleSubmit, search}) => {
     
     return (
         <form onSubmit={handleSubmit} className="search-form">
-            <label className="finder" htmlFor='ingredients'>Find your next meal</label>
+            <label className="finder" htmlFor='ingredients'>Search any ingredient and find your next meal!</label>
             <input  
-            placeholder= "Search meal" 
+            className="input"
+            placeholder= "Ingredients" 
             id="ingredients" 
             type="ingredients"
             onChange={handleChange}
@@ -17,11 +18,10 @@ const Search = ({handleChange, handleSubmit, search}) => {
             
 
             />
-            <button type='submit'>Lets get cooking!</button>
+            <button className="go" type='submit'>Find recipes!</button>
         </form>
     );
 };
 
 export default Search;
 
-// this will have a form in it, that will also have event handlers to change the state of the application, state will be declaed in the app file though so it can be passed around the app 

@@ -19,6 +19,7 @@ const Home = ({search,setSearch,getapi}) => {
     
     return (
         <div>
+            <h1 className='title'>Recipe Generator</h1>
             <Search
             handleChange= {handleChange}
             handleSubmit= {handleSubmit}
