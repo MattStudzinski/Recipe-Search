@@ -4,7 +4,7 @@ I was inspired to create this application due to the amout of effort you have to
 
 # Using the App
 
-Using the app is extremely easy, all you have to do is enter your ingredients into the search field and press enter! Once you've done that you will be met by 20 recipes with ingredients listed. There are a few options from this point on, if you dont like the results you can edit the search to a more specific recipe or if you like the results the app showed you just click on "Recipe Instructions" to go directly to the url where the recipe is held. There is also a more details route, this shows some specific details about the recipe, such as calories and time to cook.
+Using the app is extremely easy, all you have to do is enter your ingredients into the search field and press enter! Once you've done that you will be met by 20 recipes with ingredients listed. There are a few options from this point on, if you dont like the results you can edit the search to a more specific recipe or if you like the results the app showed you just click on "Recipe Instructions" to go directly to the url where the recipe is held. There is also a more details route, this shows some specific details about the recipe, such as calories and time to cook. Returning back to the search option from details is very easy, just click the return to search in the top left corner.
 
 
 ![Screen Shot 2022-07-22 at 8 36 54 AM](https://user-images.githubusercontent.com/88520969/180486929-704c1882-8cc4-43e2-9715-f20fefde0a4e.png)
