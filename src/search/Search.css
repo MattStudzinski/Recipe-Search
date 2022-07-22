@@ -1,0 +1,10 @@
+.search-form{
+    display: grid;
+    grid-template-rows: 20px 50px 50px 50px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.finder{
+    grid-row:  ;
+    grid-column: 1;
+}

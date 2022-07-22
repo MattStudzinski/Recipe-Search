@@ -1,7 +1,7 @@
 import "./Results.css"
 import React from 'react';
 import { Link, Routes, Route, Navigate } from 'react-router-dom';
-import Details from '../details/Details';
+
 
 
 
@@ -19,6 +19,7 @@ const Recipe = ({recipe}) => {
             
             <div className="more-detail">
             <Link to={'/details/'+label}>Recipe Details</Link>
+            
             </div>
             
             

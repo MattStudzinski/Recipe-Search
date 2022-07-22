@@ -25,6 +25,7 @@ function App() {
       console.log(data)
       setSearch("")
       setRecipes(data.hits)
+      console.log(recipes)
       
     })
   }
@@ -42,9 +43,10 @@ function App() {
       </nav>
       <main>
       <Routes>
+        
       <Route path="/home" element={<Home search={search} getapi={getapi} setSearch={setSearch} />} />
-      <Route path="/details/:index" element= {<Details recipes={recipes}/>}/>
-      {/* <Route path="/*" <Navigate to="/"/>/> */}
+      <Route path="/details/:chosen_recipe" element= {<Details recipes={recipes}/>}/>
+      
       </Routes>
 
       

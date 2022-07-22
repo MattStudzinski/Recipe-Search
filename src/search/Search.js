@@ -7,7 +7,7 @@ const Search = ({handleChange, handleSubmit, search}) => {
     
     return (
         <form onSubmit={handleSubmit} className="search-form">
-            <label htmlFor='ingredients'>Find your next meal</label>
+            <label className="finder" htmlFor='ingredients'>Find your next meal</label>
             <input  
             placeholder= "Search meal" 
             id="ingredients" 
