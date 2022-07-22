@@ -63,4 +63,3 @@ function App() {
 export default App;
 
 
-/* this is where the results will pop up, this will need to change multiple times with each search, not sure how to do this but will work on it. this will also maybe have no js, dont think it needs any. */

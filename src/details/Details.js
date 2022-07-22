@@ -4,11 +4,11 @@ import {useParams} from 'react-router-dom'
 
 const Details = ({recipes}) => {
 const [foundRecipe, setFoundRecipe] = useState()
-//recipes is the fetch i get from search so my list
-const {chosen_recipe} = useParams()
-//chosen-recipe is the url change that happens when i click more details
 
-// })
+const {chosen_recipe} = useParams()
+
+
+
 const findRecipe = (recipe) => {
     return(
     recipe.label=chosen_recipe
@@ -19,7 +19,7 @@ useEffect(()=> {
 },[recipes])
 
 console.log(foundRecipe)
-// recipes.label.index using .find
+
 if(!foundRecipe) {
     return null
 }
@@ -38,4 +38,4 @@ if(!foundRecipe) {
 
 export default Details;
 
-//i have to match this index to the same index of the 
+ 
