@@ -1,12 +1,18 @@
 .more-details {
     display: grid;
-    grid-template-rows:  1fr;
+    grid-template-rows:   1fr;
     grid-template-columns: 1fr;
     justify-items: center;
     border: 5px solid white;
     border-radius: 3px;
     margin: 280px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(38, 38, 83);;
 }
-.food_im{
+.food-im{
+    margin: 10px;
     border: solid white;
+    width: 50%;
 }
+
