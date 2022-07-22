@@ -1,0 +1,12 @@
+.more-details {
+    display: grid;
+    grid-template-rows:  1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    border: 5px solid white;
+    border-radius: 3px;
+    margin: 280px;
+}
+.food_im{
+    border: solid white;
+}

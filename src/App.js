@@ -1,11 +1,10 @@
 
 import Home from './Home';
-import Results from './results/Results';
-import Search from './search/Search';
+
 import React, { useState } from 'react'
 import {Routes, Route, Link, Navigate} from 'react-router-dom'
 import Details from './details/Details';
-import './App.css'
+
 
 
 function App() {
@@ -44,14 +43,13 @@ function App() {
       <main>
       <Routes>
         
-      <Route path="/home" element={<Home search={search} getapi={getapi} setSearch={setSearch} />} />
+      <Route path="/home" element={<Home search={search} getapi={getapi} setSearch={setSearch} recipes={recipes} />} />
       <Route path="/details/:chosen_recipe" element= {<Details recipes={recipes}/>}/>
       
       </Routes>
 
       
-      <Results 
-      recipes={recipes}/>
+      
       
 
       </main>

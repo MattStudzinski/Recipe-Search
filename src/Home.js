@@ -1,8 +1,9 @@
 import React from 'react';
 import Search from './search/Search';
+import Results from './results/Results';
 
 
-const Home = ({search,setSearch,getapi}) => {
+const Home = ({search,setSearch,getapi,recipes}) => {
 
     const handleChange = (event) => {
         setSearch(event.target.value)
@@ -24,6 +25,8 @@ const Home = ({search,setSearch,getapi}) => {
             handleChange= {handleChange}
             handleSubmit= {handleSubmit}
             search= {search} />
+            <Results 
+        recipes={recipes}/>
         </div>
     );
 };

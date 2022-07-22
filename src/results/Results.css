@@ -1,5 +1,6 @@
 body{
     background-color: #32377c;
+    font-family:monospace;
 }
 
 .recipe {
@@ -91,6 +92,7 @@ a:hover{
     a {
         font-size: 24px;
     }
+
 }
     
 @media screen and (min-width: 820px){
