@@ -2,9 +2,9 @@
 import Home from './Home';
 import Results from './results/Results';
 import Search from './search/Search';
-import Sidebar from './sidebar/Sidebar';
 import React, { useState } from 'react'
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route, Link, Navigate} from 'react-router-dom'
+import Details from './details/Details';
 
 
 
@@ -13,10 +13,10 @@ function App() {
   const [recipes, setRecipes] = useState([])
 
   const APP_ID ='bb0a04fb'
-  const API_KEY ='a3373011db3d5cb902adb61da213a1cb'
+  
   
   function getapi () {
-    const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${API_KEY}`
+    const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&to=20`
     fetch (url1)
     .then((res) => {
       return res.json()
@@ -30,43 +30,27 @@ function App() {
   }
     
 
-    const handleChange = (event) => {
-        setSearch(event.target.value)
-
-    }
-
-    
-
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        console.log(search)
-        getapi()
-
-    }
 
   return (
     <div className="App">
       
       <nav>
-      <Link to="/">
+      <Link to="/home">
       <h5>back to search</h5>
       </Link>
       
       </nav>
       <main>
       <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/home" element={<Home search={search} getapi={getapi} setSearch={setSearch} />} />
+      <Route path="/details/:index" element= {<Details recipes={recipes}/>}/>
+      {/* <Route path="/*" <Navigate to="/"/>/> */}
       </Routes>
 
-      <Search
-      handleChange= {handleChange}
-      handleSubmit= {handleSubmit}
-      search= {search} />
+      
       <Results 
       recipes={recipes}/>
-      <Sidebar
-      search={search}
-      setSearch={setSearch}/>
+      
 
       </main>
 

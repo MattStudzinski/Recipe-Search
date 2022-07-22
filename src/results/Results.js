@@ -7,6 +7,7 @@ import Details from '../details/Details';
 
 const Recipe = ({recipe}) => {
     const {label,image,url,ingredients,} = recipe.recipe 
+    
     return (
         <div className='recipe'>
             <h2 className='recipe-title'>{label}</h2>
@@ -17,15 +18,15 @@ const Recipe = ({recipe}) => {
 
             
             <div className="more-detail">
-            <Link to='/details'>Recipe Details</Link>
+            <Link to={'/details/'+label}>Recipe Details</Link>
             </div>
-            <Routes>
-                <Route path="/details" element= {<Details/>}/>
-            </Routes>
+            
             
             <ul className='ingredient-list'>
-                {ingredients.map(ingredient => (
-                    <li>{ingredient.text}</li>
+                {ingredients.map((ingredient,index) => (
+                    <li key={index}>{ingredient.text}</li>
+                    
+                    
                 ))}
             </ul>
             
@@ -45,7 +46,8 @@ const Results = ({recipes}) => {
     return (
         
         <div className='recipes'>
-        {recipes !== [] && recipes.map(recipe => <Recipe key={recipe.calories} recipe={recipe}/> )}
+        {recipes !== [] && recipes.map((recipe,index) => <Recipe key={index} recipe={recipe} /> )}
+        
         
         
         </div>
