@@ -15,7 +15,10 @@ Using the app is extremely easy, all you have to do is enter your ingredients in
 
 
 Technologies used: React.js, CSS, HTML
+
 API used: https://developer.edamam.com/edamam-recipe-api
+
+Launched website: https://recipegenerator221.netlify.app/home
 
 ![IMG_4600](https://user-images.githubusercontent.com/88520969/180489359-e9dcb48a-a05a-4e8c-ab58-d19102640491.jpeg)
 
