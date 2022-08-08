@@ -48,10 +48,6 @@ function App() {
       
       </Routes>
 
-      
-      
-      
-
       </main>
 
       

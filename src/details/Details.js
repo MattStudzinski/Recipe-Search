@@ -15,10 +15,13 @@ const findRecipe = (recipe) => {
     )
 }
 useEffect(()=> {
+    
+    
     setFoundRecipe(recipes.find(findRecipe))
 },[recipes])
 
-console.log(foundRecipe)
+
+
 
 if(!foundRecipe) {
     return null
