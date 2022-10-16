@@ -20,7 +20,7 @@ const Search = ({handleChange, handleSubmit, search}) => {
             />
             <button className="go" type='submit'>Find recipes!</button>
         </form>
-        
+    
     );
 };
 

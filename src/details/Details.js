@@ -9,16 +9,19 @@ const {chosen_recipe} = useParams()
 
 
 
-const findRecipe = (recipe) => {
-    return(
-    recipe.label=chosen_recipe
-    )
-}
+
 useEffect(()=> {
+    const findRecipe = (recipe) => {
+        return(
+        recipe.label=chosen_recipe
+        )
+    }
     
     
     setFoundRecipe(recipes.find(findRecipe))
-},[recipes])
+    console.log(foundRecipe)
+    console.log(chosen_recipe)
+},[foundRecipe, recipes, chosen_recipe])
 
 
 

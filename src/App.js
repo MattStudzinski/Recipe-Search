@@ -2,7 +2,7 @@
 import Home from './Home';
 
 import React, { useState } from 'react'
-import {Routes, Route, Link, Navigate} from 'react-router-dom'
+import {Routes, Route,} from 'react-router-dom'
 import Details from './details/Details';
 
 
@@ -35,16 +35,14 @@ function App() {
     <div className="App">
       
       <nav>
-      <Link to="/home">
-      <h5>Return to search</h5>
-      </Link>
+
       
       </nav>
       <main>
       <Routes>
-        
-      <Route path="/home" element={<Home search={search} getapi={getapi} setSearch={setSearch} recipes={recipes} />} />
-      <Route path="/details/:chosen_recipe" element= {<Details recipes={recipes}/>}/>
+      
+      <Route path="*" element={<Home search={search} getapi={getapi} setSearch={setSearch} recipes={recipes} />} />
+      <Route path="/details/:productId" element= {<Details recipes={recipes}/>}/>
       
       </Routes>
 
