@@ -42,7 +42,7 @@ function App() {
       <Routes>
       
       <Route path="*" element={<Home search={search} getapi={getapi} setSearch={setSearch} recipes={recipes} />} />
-      <Route path="/details/:productId" element= {<Details recipes={recipes}/>}/>
+      <Route path="/details/:chosen_recipe" element= {<Details recipes={recipes}/>}/>
       
       </Routes>
 
