@@ -1,7 +1,7 @@
 import "./Results.css"
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Details from "../details/Details";
+
 
 
 
@@ -26,7 +26,7 @@ const Recipe = ({recipe}) => {
             
             <ul className='ingredient-list'>
                 {ingredients.map((ingredient,index) => (
-                    <li key={index}>{ingredient.text}</li>
+                    <li className="list" key={index}>{ingredient.text}</li>
                     
                     
                 ))}

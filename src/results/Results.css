@@ -1,5 +1,5 @@
 body{
-    background-color: #32377c;
+    background-color: #666666;
     font-family:monospace;
 }
 
@@ -43,6 +43,9 @@ body{
     border-radius: 10px;
     color: white;
     background-color: #747580;
+}
+.list{
+    font-size: 16px;
 }
 
 a {
