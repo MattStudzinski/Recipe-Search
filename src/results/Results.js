@@ -1,8 +1,9 @@
-import "./Results.css"
+import "./Results.module.css"
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Details from "../details/Details";
-
+import classes from '../UI/Card.module.css'
+import Card from "../UI/Card";
 
 
 
@@ -14,16 +15,16 @@ const Recipe = ({recipe}) => {
     const {label,image,url,ingredients,} = recipe.recipe 
     
     return (
-        <div className='recipe'>
-            <h2 className='recipe-title'>{label}</h2>
-            <img className='food-image' src={image} alt= {label}/>
-            <a className='link' href={url} target= "_blank" rel='noopener noreferrer'>
+        <Card className= {classes.recipe}>
+            <h2>{label}</h2>
+            <img src={image} alt= {label}/>
+            <a href={url} target= "_blank" rel='noopener noreferrer'>
                 Recipe Instructions
             </a>
             
-            <ul className='ingredient-list'>
+            <ul>
                 {ingredients.map((ingredient,index) => (
-                    <li className="list" key={index}>{ingredient.text}</li>
+                    <li key={index}>{ingredient.text}</li>
                     
                     
                 ))}
@@ -34,7 +35,7 @@ const Recipe = ({recipe}) => {
             
             
             
-        </div>
+        </Card>
     );
     
 };
@@ -57,4 +58,3 @@ const Results = ({recipes}) => {
 
 
 export default Results;
-

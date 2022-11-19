@@ -1,4 +1,6 @@
 import "./Search.css"
+import Button from "../UI/Button";
+
 const Search = ({handleChange, handleSubmit, search}) => {
     
 
@@ -19,7 +21,7 @@ const Search = ({handleChange, handleSubmit, search}) => {
             
 
             />
-            <button className="go" type='submit'>Find recipes!</button>
+            <Button className="go" type='submit'>Find recipes!</Button>
         </form>
     
     );

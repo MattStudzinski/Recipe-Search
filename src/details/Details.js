@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Details = ({recipe}) => {
     const {calories,cuisineType,mealType,cautions,dietLabels,totalTime} = recipe.recipe
     return (
