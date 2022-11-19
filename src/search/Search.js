@@ -9,6 +9,7 @@ const Search = ({handleChange, handleSubmit, search}) => {
         <form onSubmit={handleSubmit} className="search-form">
             <label className="finder" htmlFor='ingredients'>Search any ingredient!</label>
             <input  
+            autoComplete="off"
             className="input"
             placeholder= "Ingredients" 
             id="ingredients" 

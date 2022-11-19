@@ -1,6 +1,6 @@
 
 import Home from './Home';
-
+import Axios from 'axios';
 import React, { useState } from 'react'
 import {Routes, Route,} from 'react-router-dom'
 import Details from './details/Details';
@@ -13,20 +13,28 @@ function App() {
 
   const APP_ID ='bb0a04fb'
   
+  const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&to=20`
+
+  // function getapi () {
   
-  function getapi () {
-    const url1 =`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${process.env.REACT_APP_API_KEY}&to=20`
-    fetch (url1)
-    .then((res) => {
-      return res.json()
-    })
-    .then((data) => {
-      console.log(data)
-      setSearch("")
-      setRecipes(data.hits)
-      console.log(recipes)
+  //   fetch (url1)
+  //   .then((res) => {
+  //     return res.json()
+  //   })
+  //   .then((data) => {
+  //     console.log(data)
+  //     setSearch("")
+  //     setRecipes(data.hits)
+  //     console.log(recipes)
       
-    })
+  //   })
+  // }
+
+  const getapi = async() => {
+    const result = await Axios.get(url1)
+    setRecipes(result.data.hits)
+    console.log(result)
+    setSearch('')
   }
     
 
@@ -42,7 +50,7 @@ function App() {
       <Routes>
       
       <Route path="*" element={<Home search={search} getapi={getapi} setSearch={setSearch} recipes={recipes} />} />
-      <Route path="/details/:chosen_recipe" element= {<Details recipes={recipes}/>}/>
+      
       
       </Routes>
 

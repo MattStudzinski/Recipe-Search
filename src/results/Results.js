@@ -1,12 +1,16 @@
 import "./Results.css"
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import Details from "../details/Details";
+
 
 
 
 
 
 const Recipe = ({recipe}) => {
+
+    const [show,setShow] = useState(false)
     const {label,image,url,ingredients,} = recipe.recipe 
     
     return (
@@ -16,13 +20,6 @@ const Recipe = ({recipe}) => {
             <a className='link' href={url} target= "_blank" rel='noopener noreferrer'>
                 Recipe Instructions
             </a>
-
-            
-            <div className="more-detail">
-            <Link to={'/details/'+ label}>Recipe Details</Link>
-            
-            </div>
-            
             
             <ul className='ingredient-list'>
                 {ingredients.map((ingredient,index) => (
@@ -31,7 +28,8 @@ const Recipe = ({recipe}) => {
                     
                 ))}
             </ul>
-            
+            <button onClick={() => setShow(!show)}>More details</button>
+            {show && <Details recipe={recipe}/>}
             
             
             
