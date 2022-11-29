@@ -2,8 +2,8 @@ import "./Results.module.css"
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Details from "../details/Details";
-import classes from '../UI/Card.module.css'
-import Card from "../UI/Card";
+
+
 
 
 
@@ -15,7 +15,7 @@ const Recipe = ({recipe}) => {
     const {label,image,url,ingredients,} = recipe.recipe 
     
     return (
-        <Card className= {classes.recipe}>
+            <section>
             <h2>{label}</h2>
             <img src={image} alt= {label}/>
             <a href={url} target= "_blank" rel='noopener noreferrer'>
@@ -34,8 +34,9 @@ const Recipe = ({recipe}) => {
             
             
             
+            </section>
             
-        </Card>
+    
     );
     
 };

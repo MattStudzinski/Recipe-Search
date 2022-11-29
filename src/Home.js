@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from './search/Search';
 import Results from './results/Results';
+import Card from "./UI/Card";
 
 
 const Home = ({search,setSearch,getapi,recipes}) => {
@@ -25,8 +26,10 @@ const Home = ({search,setSearch,getapi,recipes}) => {
             handleChange= {handleChange}
             handleSubmit= {handleSubmit}
             search= {search} />
+            <Card>
             <Results 
         recipes={recipes}/>
+        </Card>
         </div>
     );
 };
