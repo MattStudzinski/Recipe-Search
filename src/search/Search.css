@@ -27,6 +27,7 @@
 }
 .go{
     grid-row: 3;
+    grid-column: 2;
     height: 30px;
     font-size: 16px;
     border:2px solid white;

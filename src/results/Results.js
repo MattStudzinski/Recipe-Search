@@ -9,12 +9,14 @@ import Details from "../details/Details";
 
 
 
+
 const Recipe = ({recipe}) => {
 
     const [show,setShow] = useState(false)
     const {label,image,url,ingredients,} = recipe.recipe 
     
     return (
+       
             <section>
             <h2>{label}</h2>
             <img src={image} alt= {label}/>
@@ -35,6 +37,8 @@ const Recipe = ({recipe}) => {
             
             
             </section>
+            
+            
             
     
     );
